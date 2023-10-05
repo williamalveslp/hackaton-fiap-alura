@@ -2,7 +2,7 @@
 
 public class Schedule
 {
-    public int Id { get; set; }
+    public int Id { get; private set; }
 
     private static int _nextId = 1;
 

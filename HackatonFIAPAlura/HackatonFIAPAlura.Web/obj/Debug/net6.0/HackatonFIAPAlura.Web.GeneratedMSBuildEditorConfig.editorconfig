@@ -28,6 +28,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9ub3JzXFNjaGVkdWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Projetos_Github/hackaton-fiap-alura/HackatonFIAPAlura/HackatonFIAPAlura.Web/Views/Equipaments/Confirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBhbWVudHNcQ29uZmlybWF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projetos_Github/hackaton-fiap-alura/HackatonFIAPAlura/HackatonFIAPAlura.Web/Views/Equipaments/Enroll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBhbWVudHNcRW5yb2xsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Projetos_Github/hackaton-fiap-alura/HackatonFIAPAlura/HackatonFIAPAlura.Web/Views/Equipaments/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBhbWVudHNcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

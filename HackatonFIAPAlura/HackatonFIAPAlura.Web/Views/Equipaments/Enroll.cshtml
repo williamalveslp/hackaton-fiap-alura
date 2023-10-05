@@ -1,0 +1,59 @@
+﻿@model HackatonFIAPAlura.Web.ViewModels.EquipamentViewModel
+
+@{
+    ViewData["Title"] = "Cadastro de Equipamentos/Inventário";
+}
+
+<h2>Cadastro de Equipamentos/Inventário</h2>
+
+<form id="equipamentoForm" method="post">
+    <div class="mb-3">
+        <label for="equipmentName" class="form-label">Nome do Equipamento</label>
+        <input type="text" class="form-control" id="equipmentName" name="EquipmentName" placeholder="Digite o nome do equipamento">
+    </div>
+    <div class="mb-3">
+        <label class="form-check-label" for="isInGoodCondition">Está em bom uso/boa conservação?</label>
+        <input type="checkbox" class="form-check-input" id="isInGoodCondition" name="IsInGoodCondition">
+    </div>
+    <div class="mb-3">
+        <label class="form-check-label" for="isAPiece">É uma peça?</label>
+        <input type="checkbox" class="form-check-input" id="isAPiece" name="IsAPiece">
+    </div>
+    <div class="mb-3">
+        <label for="donorName" class="form-label">Nome do Doador/Empresa que Doou</label>
+        <input type="text" class="form-control" id="donorName" name="DonorName" placeholder="Digite o nome do doador/empresa">
+    </div>
+    <button type="submit" class="btn btn-primary">Cadastrar Equipamento</button>
+</form>
+
+<script>
+    $(document).ready(function () {
+        $('#equipamentoForm').submit(function (e) {
+            e.preventDefault();
+
+            var formData = {
+                EquipmentName: $('#equipmentName').val(),
+                IsInGoodCondition: $('#isInGoodCondition').is(":checked"),
+                IsAPiece: $('#isAPiece').is(":checked"),
+                DonorName: $('#donorName').val()
+            };
+
+            $.ajax({
+                type: 'POST',
+                url: '/Equipaments/SaveEquipament',
+                data: JSON.stringify(formData),
+                contentType: 'application/json',
+                success: function (response) {
+
+                    alert('Equipamento cadastrado com sucesso!');
+                    console.log('Equipamento cadastrado com sucesso:', response);
+                    location.href = '/Donors/List';
+                },
+                error: function (error) {
+                    alert('Erro ao cadastrar equipamento!');
+                    console.error('Erro ao cadastrar equipamento:', error);
+                }
+            });
+        });
+    });
+</script>

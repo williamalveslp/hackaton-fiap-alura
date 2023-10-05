@@ -37,11 +37,9 @@
 
 <script>
     $(document).ready(function () {
-        // Intercepta o evento de envio do formulário
         $('#agendamentoForm').submit(function (e) {
-            e.preventDefault(); // Impede o envio padrão do formulário
+            e.preventDefault();
 
-            // Obtém os dados do formulário
             var formData = {
                 name: $('#name').val(),
                 personType: $('#personType').val(),
@@ -51,14 +49,12 @@
                 Description: $('#Description').val()
             };
 
-            // Faz a requisição AJAX para o backend
             $.ajax({
                 type: 'POST',
-                url: '/Donors/SaveSchedule', // URL do endpoint
+                url: '/Donors/SaveSchedule',
                 data: JSON.stringify(formData),
                 contentType: 'application/json',
                 success: function (response) {
-                    // Lógica para lidar com a resposta do backend (pode redirecionar ou exibir uma mensagem)
 
                     alert('Agendamento enviado com sucesso!');
                     console.log('Agendamento enviado com sucesso:', response);
