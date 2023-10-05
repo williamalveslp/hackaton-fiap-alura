@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "List";
+}
+
+<h2>Cadastro de Agendamento de Visita</h2>
+
+<form id="agendamentoForm" method="post">
+    <div class="mb-3">
+        <label for="nomeEmpresa" class="form-label">Nome / Empresa</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Digite o nome ou nome da empresa">
+    </div>
+    <div class="mb-3">
+        <label for="tipoPessoa" class="form-label">Pessoa Física ou Empresa?</label>
+        <select class="form-select" id="personType" name="personType">
+            <option value="pessoaFisica">Pessoa Física</option>
+            <option value="empresa">Empresa</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="telefone" class="form-label">Telefone</label>
+        <input type="tel" class="form-control" id="Phone" placeholder="Digite o número de telefone" name="Phone">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Digite o endereço de email" name="Email">
+    </div>
+    <div class="mb-3">
+        <label for="dataHora" class="form-label">Data e Hora para Disponibilidade</label>
+        <input type="datetime-local" class="form-control" id="AvailableDate" name="AvailableDate">
+    </div>
+    <div class="mb-3">
+        <label for="descricaoEquipamentos" class="form-label">Descreva os Equipamentos que Deseja Doar</label>
+        <textarea class="form-control" id="Description" rows="3" placeholder="Descreva os equipamentos" name="Description"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar Agendamento</button>
+</form>
+
+<script>
+    $(document).ready(function () {
+        // Intercepta o evento de envio do formulário
+        $('#agendamentoForm').submit(function (e) {
+            e.preventDefault(); // Impede o envio padrão do formulário
+
+            // Obtém os dados do formulário
+            var formData = {
+                name: $('#name').val(),
+                personType: $('#personType').val(),
+                Phone: $('#Phone').val(),
+                Email: $('#email').val(),
+                AvailableDate: $('#AvailableDate').val(),
+                Description: $('#Description').val()
+            };
+
+            // Faz a requisição AJAX para o backend
+            $.ajax({
+                type: 'POST',
+                url: '/Donors/SaveSchedule', // URL do endpoint
+                data: JSON.stringify(formData),
+                contentType: 'application/json',
+                success: function (response) {
+                    // Lógica para lidar com a resposta do backend (pode redirecionar ou exibir uma mensagem)
+
+                    alert('Agendamento enviado com sucesso!');
+                    console.log('Agendamento enviado com sucesso:', response);
+                    location.href = '/Donors/Confirmation';
+                },
+                error: function (error) {
+                    alert('Erro ao enviar agendamento!');
+                    console.error('Erro ao enviar agendamento:', error);
+                }
+            });
+        });
+    });
+</script>

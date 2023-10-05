@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "List";
+}
+
+<h2>Perfil do Doador</h2>
+
+<div class="card">
+    <div class="card-body bg-light text-center">
+        <!-- Adicione a classe 'text-center' aqui -->
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#entregarPessoalmenteModal">
+                <img src="https://images.pexels.com/photos/7598913/pexels-photo-7598913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Entregar Pessoalmente" width="500" height="400">
+                <br>Entregar Pessoalmente
+            </button>
+            <a href="~/Donors/schedule" class="btn btn-primary">
+                <img src="https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Buscar Equipamentos" width="500" height="400">
+                <br>Prefere que alguém vá buscar
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Modal para entrega pessoal -->
+<div class="modal fade" id="entregarPessoalmenteModal" tabindex="-1" role="dialog" aria-labelledby="entregarPessoalmenteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="entregarPessoalmenteModalLabel">Endereço para entrega pessoal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Conteúdo da modal -->
+                <p>Agradecemos seu interesse em doar seus equipamentos de informática! :)</p>
+                <p>Estaremos muito felizes em te receber.</p>
+                <p>Segue abaixo o endereço para envio dos equipamentos:</p>
+                <address>
+                    ONG Passos Mágicos<br>
+                    R. dos Veteranos, 50 - Filipinho, Embu-Guaçu - SP, 69000-000
+                </address>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+

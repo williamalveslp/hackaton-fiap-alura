@@ -16,12 +16,36 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Projetos_Github\hackaton-fiap-alura\HackatonFIAPAlura\HackatonFIAPAlura.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Projetos_Github/hackaton-fiap-alura/HackatonFIAPAlura/HackatonFIAPAlura.Web/Views/Donors/Confirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9ub3JzXENvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projetos_Github/hackaton-fiap-alura/HackatonFIAPAlura/HackatonFIAPAlura.Web/Views/Donors/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9ub3JzXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projetos_Github/hackaton-fiap-alura/HackatonFIAPAlura/HackatonFIAPAlura.Web/Views/Donors/Schedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9ub3JzXFNjaGVkdWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projetos_Github/hackaton-fiap-alura/HackatonFIAPAlura/HackatonFIAPAlura.Web/Views/Equipaments/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBhbWVudHNcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Projetos_Github/hackaton-fiap-alura/HackatonFIAPAlura/HackatonFIAPAlura.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Projetos_Github/hackaton-fiap-alura/HackatonFIAPAlura/HackatonFIAPAlura.Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projetos_Github/hackaton-fiap-alura/HackatonFIAPAlura/HackatonFIAPAlura.Web/Views/Partners/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydG5lcnNcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projetos_Github/hackaton-fiap-alura/HackatonFIAPAlura/HackatonFIAPAlura.Web/Views/Schools/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Nob29sc1xMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Projetos_Github/hackaton-fiap-alura/HackatonFIAPAlura/HackatonFIAPAlura.Web/Views/Shared/Error.cshtml]
