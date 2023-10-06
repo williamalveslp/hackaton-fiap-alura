@@ -24,5 +24,5 @@ Para clonar e executar este projeto, você não precisa de nenhuma configuraçã
 
 ## Integrantes
 - William Goi
-- Livia
+- Livia Kobayashi
 - Mauricio Bandeira
