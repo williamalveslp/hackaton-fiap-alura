@@ -1,7 +1,41 @@
-﻿
+﻿@using HackatonFIAPAlura.Web.ViewModels;
+
+@model IEnumerable<EquipamentListViewModel>
+
 @{
-    ViewData["Title"] = "List";
+    ViewData["Title"] = "Lista de Equipamentos";
 }
 
-<h1>List Equipamentos</h1>
+<h2>Lista de Equipamentos</h2>
 
+<a href="/Equipaments/Enroll" class="btn btn-primary">Novo+</a>
+
+@if (Model.Any())
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nome do Equipamento</th>
+                <th>Em bom estado</th>
+                <th>É uma peça</th>
+                <th>Nome do Doador/Empresa que Doou</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var equipment in Model)
+            {
+                <tr>
+                    <td>@equipment.EquipmentName</td>
+                    <td>@(equipment.IsInGoodCondition ? "Sim" : "Não")</td>
+                    <td>@(equipment.IsAPiece ? "Sim" : "Não")</td>
+                    <td>@equipment.DonorName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <br />
+    <p>Ainda não há equipamentos cadastrados.</p>
+}

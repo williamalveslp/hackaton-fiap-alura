@@ -1,6 +1,6 @@
 ﻿namespace HackatonFIAPAlura.Web.ViewModels;
 
-public class EquipamentViewModel
+public class EquipamentEnrollViewModel
 {
     public string EquipmentName { get; set; }
     public bool IsInGoodCondition { get; set; }

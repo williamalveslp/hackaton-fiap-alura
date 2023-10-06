@@ -1,0 +1,57 @@
+﻿@using HackatonFIAPAlura.Web.ViewModels;
+
+@model SchoolEnrollViewModel
+
+@{
+    ViewData["Title"] = "Cadastro de Escolas";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/Schools/List">Listagem</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Cadastro</li>
+    </ol>
+</nav>
+
+<h2>Cadastro de Escolas</h2>
+
+<form id="schoolForm" method="post">
+    <div class="mb-3">
+        <label for="schoolName" class="form-label">Nome da Escola</label>
+        <input type="text" class="form-control" id="schoolName" name="SchoolName" placeholder="Digite o nome da escola" autocomplete="off">
+    </div>
+    <div class="mb-3">
+        <label for="city" class="form-label">Cidade</label>
+        <input type="text" class="form-control" id="city" name="City" placeholder="Digite a cidade da escola" autocomplete="off">
+    </div>
+    <button type="submit" class="btn btn-primary">Cadastrar Escola</button>
+</form>
+
+<script>
+    $(document).ready(function () {
+        $('#schoolForm').submit(function (e) {
+            e.preventDefault();
+
+            var formData = {
+                schoolName: $('#schoolName').val(),
+                city: $('#city').val()
+            };
+
+            $.ajax({
+                type: 'POST',
+                url: '/schools/save',
+                data: JSON.stringify(formData),
+                contentType: 'application/json',
+                success: function (response) {
+                    alert('Escola cadastrada com sucesso!');
+                    location.href = '/Schools/List';
+                },
+                error: function (error) {
+                    alert('Erro ao cadastrar escola!');
+                    console.error('Erro ao cadastrar escola:', error);
+                }
+            });
+        });
+    });
+</script>

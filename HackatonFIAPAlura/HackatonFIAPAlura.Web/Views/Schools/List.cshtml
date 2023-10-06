@@ -1,6 +1,37 @@
-﻿
+﻿@using HackatonFIAPAlura.Web.ViewModels;
+
+@model IEnumerable<SchoolListViewModel>
+
 @{
-    ViewData["Title"] = "List";
+    ViewData["Title"] = "Lista de Escolas";
 }
 
-<h1>List Schools</h1>
+<h2>Lista de Escolas</h2>
+
+<a href="/Schools/Enroll" class="btn btn-primary">Novo+</a>
+
+@if (Model.Any())
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nome da Escola</th>
+                <th>Cidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var school in Model)
+            {
+                <tr>
+                    <td>@school.SchoolName</td>
+                    <td>@school.City</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <br />
+    <p>Ainda não há escolas cadastradas.</p>
+}

@@ -1,6 +1,6 @@
 ﻿namespace HackatonFIAPAlura.Web.ViewModels;
 
-public class ScheduleViewModel
+public class ScheduleEnrollViewModel
 {
     public string Name { get; set; }
     public string PersonType { get; set; }

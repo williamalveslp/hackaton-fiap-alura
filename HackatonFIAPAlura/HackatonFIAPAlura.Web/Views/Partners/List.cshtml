@@ -1,7 +1,40 @@
-﻿
+﻿@using HackatonFIAPAlura.Web.ViewModels;
+
+@model IEnumerable<PartnerListViewModel>
+
 @{
-    ViewData["Title"] = "List";
+    ViewData["Title"] = "Lista de Parceiros";
 }
 
-<h1>List Partners</h1>
+<h2>Lista de Parceiros</h2>
 
+<a href="/Partners/Enroll" class="btn btn-primary">Novo+</a>
+
+@if (Model.Any())
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cidade</th>
+                <th>Especialidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var partner in Model)
+            {
+                <tr>
+                    <!-- <td><a href="/Partners/Details/@partner.Id">@partner.Name</a></td> -->
+                    <td>@partner.Name</td>
+                    <td>@partner.City</td>
+                    <td>@partner.Specialist</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <br/>
+    <p>Ainda não há parceiros cadastrados.</p>
+}

@@ -1,8 +1,16 @@
-﻿@model HackatonFIAPAlura.Web.ViewModels.EquipamentViewModel
+﻿@model HackatonFIAPAlura.Web.ViewModels.EquipamentEnrollViewModel
 
 @{
     ViewData["Title"] = "Cadastro de Equipamentos/Inventário";
 }
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/Equipaments/List">Listagem</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Cadastro de Equipamentos</li>
+    </ol>
+</nav>
 
 <h2>Cadastro de Equipamentos/Inventário</h2>
 
@@ -46,8 +54,7 @@
                 success: function (response) {
 
                     alert('Equipamento cadastrado com sucesso!');
-                    console.log('Equipamento cadastrado com sucesso:', response);
-                    location.href = '/Donors/List';
+                    location.href = '/Equipaments/List';
                 },
                 error: function (error) {
                     alert('Erro ao cadastrar equipamento!');

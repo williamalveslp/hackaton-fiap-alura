@@ -24,7 +24,7 @@ public class DonorsController : Controller
 
     [HttpPost]
     [Route("Donors/SaveSchedule")]
-    public IActionResult SaveSchedule([FromBody] ScheduleViewModel viewModel)
+    public IActionResult SaveSchedule([FromBody] ScheduleEnrollViewModel viewModel)
     {
         if (ModelState.IsValid)
         {

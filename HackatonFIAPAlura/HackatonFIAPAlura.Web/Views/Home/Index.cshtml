@@ -2,7 +2,58 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    .jumbotron {
+        background-color: #007BFF;
+        color: #fff;
+    }
+
+        .jumbotron h1 {
+            font-size: 36px;
+        }
+
+        .jumbotron p {
+            font-size: 18px;
+        }
+
+    .menu {
+        background-color: #333;
+        color: #fff;
+    }
+
+        .menu a {
+            color: #fff;
+        }
+
+    .column {
+        margin-bottom: 20px;
+    }
+
+        .column img {
+            max-width: 100%;
+            height: auto;
+        }
+</style>
+
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1>Bem-vindo à ONG Equipa Tech Solidária</h1>
+        <p>Sua doação de equipamentos de informática faz a diferença!</p>
+        <p>Ajudamos crianças e jovens de baixa renda a terem acesso à tecnologia.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 column">
+            <h2>Como você pode ajudar?</h2>
+            <p>Faça parte da nossa missão doando equipamentos de informática em bom estado.</p>
+            <p>Contribua para um futuro melhor para as crianças e jovens carentes.</p>
+            <img src="https://images.pexels.com/photos/1187086/pexels-photo-1187086.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Imagem 1">
+        </div>
+        <div class="col-md-6 column">
+            <h2>Por que escolher a Tech Solidária?</h2>
+            <p>Nossa ONG tem um histórico sólido de ajudar a comunidade.</p>
+            <p>Comprometemo-nos a usar suas doações de forma eficaz e responsável.</p>
+            <img src="https://images.pexels.com/photos/4842487/pexels-photo-4842487.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Imagem 2">
+        </div>
+    </div>
 </div>
